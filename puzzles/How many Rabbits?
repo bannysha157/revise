@@ -1,0 +1,15 @@
+Q/A: Suppose a newly-born pair of rabbits, one male, one female, are put in a field. 
+Rabbits can mate at the age of one month sothat at the end of its second month, a female can produce another pair of rabbits. 
+Suppose that rabbits never die and that the female always has one new pair (one male, one female) every month from the second monthon.
+Howmanypairswilltherebe in one year?
+
+
+
+Solution: ● They mate at the end of the first month, but there is still one, only one pair.
+● At the end of the second month, the female produces a new pair, so two pairs of rabbits are in the field. 
+● At the end of the third month, the original female produces a second pair, making three pairs in the field. 
+● At the end of the fourth month, the original female has produced another new pair. 
+The female born two months ago produces her first pair also, making five pairs.
+If we carefully notice the pattern, it’s a Fibonacci Series, where F(n) represents the number of pairs of rabbits at the end of the nth month.
+F(0)=F(1)=1; F(n) = F(n-1) + F(n-2);
+So the series is: 1 1 2 3 5 8 13 21 34 55 89 144… So at the end of 12 months, we’ll have 144 pairs, i.e. 288 rabbits. 2
