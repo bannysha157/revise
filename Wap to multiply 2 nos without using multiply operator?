@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+int main()
+{
+    int a,b,mul=0,i;
+    printf("enter any two numbers");
+    scanf("%d%d",&a,&b);
+    if(b<0)
+    {
+      b=-b;
+      a=-a;
+}
+for(i=1;i<=b;i++)
+{
+    mul=mul+a;
+}
+printf("after multiplication %d",mul);
+}
+
+o/p= enter ant two  numbetrs
+4 5
+20
