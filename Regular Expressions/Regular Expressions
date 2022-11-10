@@ -1,0 +1,151 @@
+# Reqular expressions:
+
+import re
+str="mug men women mad sun son "
+result=re.match(r'm[\w]*',str)    # begining of the string
+    print(result.group())
+	
+import re
+str="pen mug men women mad sun son "
+result=re.search(r'm[\w]*',str)           # first occurence
+if result!=None:
+    print(result.group())
+
+import re
+str="pen mug men women mad sun son "
+result=re.findall(r'm[\w]*',str)          # all occurences
+if result!=None:
+    print(result)
+
+
+
+import re
+str="Apple#Banana#Cherry"
+result=re.split(r'#',str)                 # split is used to tokenize the string
+if result!=[]:
+    print(result)
+	
+import re
+str="Hyderabad is the capital city of the india"
+result=re.sub(r'Hyderabad','Delhi',str)
+if result!=[]:
+    print(result)
+
+import re
+str="an apple for a day will keep the doctor away"  # ['an', 'apple', 'a', 'ay', 'away'] start with a and varaible length letters
+result=re.findall(r'a[\w]*',str)
+if result!=[]:
+    print(result)
+	
+import re
+str="an apple for a day will keep the doctor away"  # ['an', 'ap', 'ay', 'aw', 'ay']
+result=re.findall(r'a\w',str)
+if result!=[]:
+    print(result)
+
+import re
+str="an apple for a day will keep the doctor away"  # \b before and after zero or more spaces ['an', 'apple', 'a', 'away']
+result=re.findall(r'\ba[\w]*\b',str)
+if result!=[]:
+    print(result)
+
+import re
+str="1st and 4th saturday are bank holidays"   #  ['1st', '4th'] 
+result=re.findall(r'\d[\w]*',str)   # same as re.findall(r'\d\w*',str)
+if result!=[]:
+    print(result)
+
+
+ 
+ 
+import re
+str="sunday monday tuesday wednesday thursday friday saturday"
+result=re.findall(r'\w{6}',str)  #['sunday', 'monday', 'tuesda', 'wednes', 'thursd', 'friday', 'saturd'] exactly 6 characters
+if result!=[]:
+    print(result)
+	
+import re
+str="sunday monday tuesday wednesday thursday friday saturday"
+result=re.findall(r'\w{6,9}',str)  # minimum 6 max 9 characters ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+if result!=[]:
+    print(result)
+
+
+import re
+str="sunday monday tuesday wednesday thursday friday saturday"
+result=re.findall(r'\w{6,}',str)  # minimum 6 characters and max is any characters
+if result!=[]:
+    print(result)
+
+
+in regualar expressions , some characters represent more than one character to be matched in the string.
+such characters are called quantifires. for example if we write '+' it represents 1 or more repeatitions of the preceeding character
+
++ -> 1 or more repeatitions of the preceeding regexp
+* -> 0 or more repeatitions of the preceeding regexp
+? -> 0 or 1 repeatitions of the preceeding regexp
+{m} -> exactly m occurences
+{m,n}  -> from m to n.
+. -> any one character
+[] -> it matches any one character from the given list of characters
+example
+x[aeiou]z  
+xaz
+xez
+xiz
+xoz
+xuz
+ above are valid matches
+xyz is invalid match
+
+x("c"|"cpp"|"java")y  == it matches any one string from the given list of strings
+
+
+
+import re
+str="sai 28-04-1995 bannysha 15-07-20005 arveni 28-08-2010"
+result=re.findall(r'\d{2}-\d{2}-\d{4}',str)   #['28-04-1995', '17-07-1995', '28-08-2010']
+if result!=[]:
+    print(result)
+
+import re
+str="sai 28-04-1995 bannysha 17-07-1995 arveni 28-08-2010"
+result=re.findall(r'\b\w*\b',str)   #['Prints only names']
+if result!=[]:
+    for str in result:
+        try:
+            if str[0]>='A' and str[0]<='Z':
+                print(str)
+        except:
+                pass
+
+import re
+str="sai 28-04-1995 bannysha 15-07-2005 arveni 7-08-2005" 
+result=re.findall(r'^sa\w*',str)  # start with sa   #['Raja']
+if result!=[]:
+    print(result)
+
+import re
+str="Meeting may be start at 10am or 12pm or 4pm or 9pm"
+result=re.findall(r'\d{1,2}am|\d{1,2}pm',str)  # ['10am', '12pm', '4pm', '9pm']
+if result!=[]:
+    print(result)
+
+import re
+str="""101 bannysha Hyd banny@gmail.com
+     102 Balu  chennai Balu@gmail.com
+     103 arveni banglore arveni@gmail.com"""
+     
+result=re.findall(r'\w*@\w*\.\w*',str)  #['raju@gmail.com', 'Balu@gmail.com', 'Rohit@gmail.com']
+if result!=[]:
+    print(result)
+	
+	
+import re
+str="""101 bannysha Hyd bannysha@gmail.com
+     102 Balu  chennai Balu@gmail.com
+     103 arveni banglore arveni@gmail.com"""
+     
+result=re.sub(r'gmail','foxmail',str)  # substiting gmail with foxmail
+if result!=[]:
+    print(result)
