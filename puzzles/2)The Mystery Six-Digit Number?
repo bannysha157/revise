@@ -1,0 +1,20 @@
+2)Find a six-digit number containing no zeros and no repeated digits that satisfies the following conditions:
+
+1. The first and fourth digits sum to the last digit, as do the third and fifth digits.
+2. The first and second digits when read as a two-digit number equal one quarter the fourth and fifth digits.
+3. The last digit is four times the third digit.
+
+Answer:
+final 192768.
+If you call the number ABCDEF, then you get the following equations.
+
+1. A + D = F and C + E = F
+2. AB = DE / 4
+3. F = 4 × C
+
+The only numbers that work for C and E are 2 and 6 or 4 and 8, and in order to make F a single-digit number we can deduce that C = 2, E = 6 and F = 8.
+So far, our number is AB2D68.
+
+We know A + D = 8 so A and D are both odd numbers.
+The only odd number less than 8 that we can use for D to make one-quarter of two-digit number D6 also be a two-digit number is 7,
+so D = 7 and A is 1. This makes the two-digit number AB 19.
