@@ -1,0 +1,24 @@
+
+we are using the startwith() method. 
+It returns true if the string starts with a specified prefix or else returns false.
+
+PROGRAM:
+
+string = input("Enter the string : ")
+result = string.startswith('Python')
+print(result)
+
+Output:
+Enter the string : Python program
+True
+
+
+PROGRAM:
+
+string = input("Enter the string : ")
+result = string.startswith('banny')
+print(result)
+
+ Output:
+ Enter the string : bunny
+ False
