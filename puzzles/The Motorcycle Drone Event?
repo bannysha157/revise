@@ -1,0 +1,14 @@
+The Motorcycle Drone Event:
+
+Two motorcycles are separated by a distance of 80kms and move toward each other with a velocity of 40kmph.
+A drone captures this motion and travels from motorcycle X to motorcycle Y and back to X and so on until both motorcycles collide.
+Suppose the drone flies at a constant speed of 100kmph. Calculate the distance travelled by drone at the moment both the motorcycles collide.
+
+
+
+
+
+
+Solution:
+Velocity of approach for two motorcycles = (40+40)km/hr Distance between the two motorcycles = 80kms 
+Time taken for the motorcycles to collide = 80km/80km/hr = 1hour The total distance travelled by the drone = 100km/hr * 1hr = 100km
