@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define SET(NUM,POS) NUM|=(1<<POS)
+#define CLR(NUM,POS) NUM &=~(1<<POS)
+#define TOGGLE(NUM,POS) NUM ^=(1<<POS)
+int main()
+{
+	int NUM=10,POS=2;
+	printf("number=%d\n",NUM);
+	printf("position=%d\n",POS);
+	printf("set the bit:%d\n",SET(NUM,POS));
+	printf("clear the bit:%d\n",CLR(NUM,POS));
+	printf("toggle the bit:%d\n",TOGGLE(NUM,POS));
+}
