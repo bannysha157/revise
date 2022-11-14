@@ -1,0 +1,14 @@
+A company manufactures robots. Few robots are programmed to tell the truth no matter what, whereas others are programmed tolie. 
+So there are two communities in the factory, i.e. the Truth Community and the Lie Community.
+You meet with three robots and ask one of them which community do you belong to? Robot 1 replies to something in binary that you don’t understand. 
+The Second robot says that Robot 1 belongs to Lie Community.
+The Third Robot says that the Second Robot is lying. Which community does the Third Robot belong to?
+
+
+ANS:
+Let’s assume Robot 1 belongs to the Truth Community. 
+If so, he will not lie and tell he’s from the truth community.
+In this case, Robot 2 is Lying, and Robot 3 is right about it. If Robot 1 belongs to the Lie Community, he will lie from Truth Community, 
+which means Robot 2 is again lying,
+which makes Robot 3 again being right about it.
+Therefore Robot 3 is from the “TRUTH COMMUNITY”.
