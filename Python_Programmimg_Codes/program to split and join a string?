@@ -1,0 +1,71 @@
+#split of string
+
+str1=input("Enter first String with space :: ")
+print(str1.split())    #splits at space
+
+str2=input("Enter second String with (,) :: ")
+print(str2.split(','))    #splits at ','
+
+str3=input("Enter third String with (:) :: ")
+print(str3.split(':'))    #splits at ':'
+
+str4=input("Enter fourth String with (;) :: ")
+print(str4.split(';'))    #splits at ';'
+
+str5=input("Enter fifth String without space :: ")
+print([str5[i:i+2]for i in range(0,len(str5),2)])    #splits at position 2
+
+Output:
+
+Enter first String with space :: python program
+['python', 'program']
+
+Enter second String with (,) :: python, program
+['python', 'program']
+
+Enter third String with (:) :: python: program
+['python', 'program']
+
+Enter fourth String with (;) :: python; program
+['python', 'program']
+
+Enter fifth String without space :: python program
+['py', 'th', 'on', 'pr', 'og', 'ra', 'm']
+
+
+
+
+PROGRAM:
+
+
+#string joining
+str1=input("Enter first String   :: ")
+str2=input("Enter second String  :: ")
+str=str2.join(str1)     #each character of str1 is concatenated to the #front of str2
+print(“AFTER JOINING OF TWO STRING ::>”,str)
+
+OUTPUT:
+Enter first String   :: banny
+Enter second String  :: bunny
+AFTER JOINING OF TWO STRING ::  bbunnyabunnynbunnynbunnyy
+
+
+
+ROGRAM;
+
+ 
+# input string
+s = 'I WILL NEVER GIVE UP'
+# print the string after split method
+print(s.split(" "))
+# print the string after join method
+print("-".join(s.split()))
+
+
+
+OUTPUT:
+
+['I', 'WILL', 'NEVER', 'GIVE', 'UP']
+I-WILL-NEVER-GIVE-UP
+
+
