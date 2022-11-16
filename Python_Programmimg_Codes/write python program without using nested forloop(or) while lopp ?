@@ -1,0 +1,24 @@
+#using nested loop
+
+
+l1=[2,23,45,616]
+output=[]
+for num in l1:
+    num=str(num)
+    sum1=0
+    for digit in num:
+        sum1=sum1+int(digit)
+        output.append(sum1)
+
+print(l1)
+print(output)
+
+
+
+# with out using nested loop:
+l1=[2,23,45,616]
+output=[]
+for num in l1:
+output.append(sum(map(int,list(str(num)))))
+print(l1)
+print(output)
